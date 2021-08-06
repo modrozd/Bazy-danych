@@ -12,8 +12,8 @@ CREATE TABLE Lek
 
 CREATE TABLE Oddzialy
 (
-	Nazwa_oddzialu varchar(50) PRIMARY KEY CHECK (Nazwa_oddzialu IN('Oddzia³ Radioterapii', 'Oddzia³ Chemioterapii', 'Oddzia³ Chirurgii Onkologicznej',
-																	'Oddzia³ Ginekologii Onkologicznej', 'Oddzia³ Onkologii Klinicznej','Oddzia³ Diagnostyki Obrazowej')),
+	Nazwa_oddzialu varchar(50) PRIMARY KEY CHECK (Nazwa_oddzialu IN('OddziaÂ³ Radioterapii', 'OddziaÂ³ Chemioterapii', 'OddziaÂ³ Chirurgii Onkologicznej',
+																	'OddziaÂ³ Ginekologii Onkologicznej', 'OddziaÂ³ Onkologii Klinicznej','OddziaÂ³ Diagnostyki Obrazowej')),
 	Ordynator int not null
 );
 
@@ -73,7 +73,7 @@ CREATE TABLE Zabiegi_i_operacje
 (
 	ID_dzialania int IDENTITY(1,1) PRIMARY KEY,
 	Nazwa varchar(50) 
-		CHECK(Nazwa IN('Gastroskopia', 'Kolonoskopia', 'Biopsja prostaty','Usuniêcie guza CUN', 
+		CHECK(Nazwa IN('Gastroskopia', 'Kolonoskopia', 'Biopsja prostaty','UsuniÃªcie guza CUN', 
 					   'Termoablacja', 'Appendektomia', 'Cholecystektomia', 'Histerektomia z przydatkami',
 					   'Craniotomia')) not null,
 	Zalecenia varchar(100),
