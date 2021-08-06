@@ -38,9 +38,9 @@ AND
 
 --SELECT NR 2: U ilu osob wykryto choroby (i co to byly za choroby) o stopniu zaawansowania wyzszym 
 -- niz 2 i po jakim leczeniu uznano, ze jej rozwoj sie zatrzymal
---Wypisaæ grupuj¹c wg liczby pacjentów malej¹co
+--WypisaÄ‡ grupujÄ…c wg liczby pacjentÃ³w malejÄ…co
 SELECT 
-	COUNT(*) AS 'Liczba pacjentów',
+	COUNT(*) AS 'Liczba pacjentÃ³w',
 	PCH.ID_choroby,
 	PL.Rodzaj_leczenia AS 'Zastosowane leczenie'
 FROM
@@ -58,7 +58,7 @@ WHERE
 AND PL.Zatrzymanie_sie_choroby = 1
 GROUP BY
 	PCH.ID_choroby, PL.Rodzaj_leczenia
-ORDER BY 'Liczba pacjentów' DESC
+ORDER BY 'Liczba pacjentÃ³w' DESC
 
 
 --SELECT NR 3: Zwroc liste pacjentow przyjetych na Oddzial Radioterapii (rosnaco wiekiem)
@@ -77,7 +77,7 @@ ON
 WHERE
 	POB.Data_przyjecia BETWEEN '2018-01-01' AND '2021-01-01'
 AND
-	Nazwa_oddzialu = 'Oddzia³ Radioterapii'
+	Nazwa_oddzialu = 'OddziaÅ‚ Radioterapii'
 ORDER BY
 	PAC.Data_urodzenia ASC
 
@@ -103,7 +103,7 @@ SELECT * FROM Nadzor_pacjentow
 DROP VIEW Nadzor_pacjentow
 
 
---SELECT NR 5: Kto jest ordynatorem (Imiê, nazwisko, numer pracownika) Oddzia³u Onkologii Klinicznej
+--SELECT NR 5: Kto jest ordynatorem (ImiÄ™, nazwisko, numer pracownika) OddziaÅ‚u Onkologii Klinicznej
 GO
 CREATE VIEW [Lista_ordynatorow] AS
 SELECT
@@ -116,7 +116,7 @@ FROM
 WHERE
 	Lekarze.Numer_pracownika = Oddzialy.Ordynator
 AND
-	Oddzialy.Nazwa_oddzialu = 'Oddzia³ Onkologii Klinicznej'
+	Oddzialy.Nazwa_oddzialu = 'OddziaÅ‚ Onkologii Klinicznej'
 
 SELECT * FROM Lista_ordynatorow
 DROP VIEW Lista_ordynatorow
@@ -151,9 +151,9 @@ ORDER BY
 	Lekarze.Data_urodzenia ASC
 
 
---SELECT NR 8: Jaki jest œredni wiek w którym wykrywano u pacjentów chorobê X
+--SELECT NR 8: Jaki jest Å›redni wiek w ktÃ³rym wykrywano u pacjentÃ³w chorobÄ™ X
 SELECT 
-	AVG(DATEDIFF(year, Pacjenci.Data_urodzenia, Posiadana_choroba.Data_rozpoznania)) AS 'Œredni wiek',
+	AVG(DATEDIFF(year, Pacjenci.Data_urodzenia, Posiadana_choroba.Data_rozpoznania)) AS 'Åšredni wiek',
 	Posiadana_choroba.ID_choroby
 FROM
 	Pacjenci, Posiadana_choroba
@@ -161,3 +161,4 @@ WHERE
 	Posiadana_choroba.ID_choroby BETWEEN 1 AND 5
 GROUP BY
 	Posiadana_choroba.ID_choroby
+	
