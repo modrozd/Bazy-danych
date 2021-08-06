@@ -31,15 +31,15 @@ INSERT INTO Lek (Nazwa_leku)
 INSERT INTO Lekarze (PESEL, Imie, Nazwisko, Plec, Data_urodzenia, Specjalizacja)
 	VALUES
 	(59042575916, 'Andrzej', 'Zawada', 'M', '1959-04-25', 'Onkolog kliniczny'),	--szef radioterapii
-	(63081956157, 'Marta', 'Koman', 'K', '1963-08-19', 'Patomorfolog'),			--szefowa diagnostyki
+	(63081956157, 'Marta', 'Koman', 'K', '1963-08-19', 'Patomorfolog'),		--szefowa diagnostyki
 	(90031463197, 'Marek', 'Grechuta','M', '1990-03-14', 'Onkolog kliniczny'),	--szef onkologii
 	(63042753921, 'Urszula', 'Dudziak', 'K', '1963-04-27', 'Ginekolog'),		--szefowa ginekologii
 	(69113067926, 'Marzena', 'Pomorska', 'K', '1969-11-30', 'Radioterapeuta'),	--szefowa chemioterapii
 	(88041256296, 'Cezary', 'Pazura', 'M', '1988-04-12', 'Chirurg onkolog'),  	--szef chirurgii
-	(61101567346, 'Ryszard', 'Ka≥uøny', 'M', '1961-10-15', 'Reumatolog'),
+	(61101567346, 'Ryszard', 'Ka≈Çu≈ºny', 'M', '1961-10-15', 'Reumatolog'),
 	(71121232458, 'Barbara', 'Orzechowska', 'K', '1971-12-12', 'Dermatolog'),
 	(75031145727, 'Marcin', 'Dulas', 'M', '1975-03-11', 'Ortopeda'),
-	(55071551574, 'Edyta', 'GÛrniak', 'K', '1955-07-15', 'Neurolog'),
+	(55071551574, 'Edyta', 'G√≥rniak', 'K', '1955-07-15', 'Neurolog'),
 	(82121411272, 'Stefan', 'Niemen', 'M', '1982-12-14', 'Radioterapeuta'),
 	(84072962052, 'Marika', 'Hak', 'K', '1984-07-29', 'Radiolog'),
 	(71102563546, 'Dariusz', 'Bielski', 'M', '1971-10-25', 'Chirurg onkolog');
@@ -68,51 +68,51 @@ WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL 
 
 INSERT INTO Oddzialy (Nazwa_oddzialu, Ordynator)
 	VALUES
-	('Oddzia≥ Radioterapii',			  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 59042575916)), --Andrzej Zawada, 5p
-	('Oddzia≥ Chemioterapii',			  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 69113067926)), --Marzena Pomorska, 5p
-	('Oddzia≥ Chirurgii Onkologicznej',   (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 88041256296)), --Cezary Pazura, 8p
-	('Oddzia≥ Ginekologii Onkologicznej', (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 63042753921)), --Urszula Dudziak, 5p
-	('Oddzia≥ Onkologii Klinicznej',	  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 90031463197)), --Marek Grechuta, 3p
-	('Oddzia≥ Diagnostyki Obrazowej',	  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 63081956157)); --Marta Koman, 0p
+	('Oddzia≈Ç Radioterapii',			  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 59042575916)), --Andrzej Zawada, 5p
+	('Oddzia≈Ç Chemioterapii',			  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 69113067926)), --Marzena Pomorska, 5p
+	('Oddzia≈Ç Chirurgii Onkologicznej',   (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 88041256296)), --Cezary Pazura, 8p
+	('Oddzia≈Ç Ginekologii Onkologicznej', (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 63042753921)), --Urszula Dudziak, 5p
+	('Oddzia≈Ç Onkologii Klinicznej',	  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 90031463197)), --Marek Grechuta, 3p
+	('Oddzia≈Ç Diagnostyki Obrazowej',	  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 63081956157)); --Marta Koman, 0p
 
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Radioterapii'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Radioterapii'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 59042575916)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Diagnostyki Obrazowej'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Diagnostyki Obrazowej'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 63081956157)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Onkologii Klinicznej'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Onkologii Klinicznej'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 90031463197)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Ginekologii Onkologicznej'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Ginekologii Onkologicznej'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 63042753921)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Chemioterapii'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Chemioterapii'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 69113067926)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Chirurgii Onkologicznej'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Chirurgii Onkologicznej'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 88041256296)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Radioterapii'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Radioterapii'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 61101567346)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Diagnostyki Obrazowej'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Diagnostyki Obrazowej'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 71121232458)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Chirurgii Onkologicznej'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Chirurgii Onkologicznej'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 75031145727)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Diagnostyki Obrazowej'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Diagnostyki Obrazowej'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 55071551574)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Onkologii Klinicznej'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Onkologii Klinicznej'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 82121411272)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Ginekologii Onkologicznej'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Ginekologii Onkologicznej'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 84072962052)
 UPDATE Lekarze 
-SET		Nazwa_oddzialu = 'Oddzia≥ Chemioterapii'
+SET		Nazwa_oddzialu = 'Oddzia≈Ç Chemioterapii'
 WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 71102563546)
 
 
@@ -131,9 +131,9 @@ INSERT INTO Pacjenci (PESEL, Imie, Nazwisko, Plec, Data_urodzenia, Numer_pracown
 	(69120305256, 'Patryk', 'Nowski', 'M', '1969-12-03',		(SELECT dbo.Zwroc_nr_pracownika(71121232458))),
 	(66021058619, 'Renata', 'Przemyk', 'K', '1966-02-10',		(SELECT dbo.Zwroc_nr_pracownika(75031145727))),
 	(72050612765, 'Artur', 'Rojek', 'M', '1972-05-06',			(SELECT dbo.Zwroc_nr_pracownika(75031145727))),
-	(29022467892, 'Zdzis≥aw', 'BeksiÒski', 'M', '1929-02-24',	(SELECT dbo.Zwroc_nr_pracownika(55071551574))),
+	(29022467892, 'Zdzis≈Çaw', 'Beksi≈Ñski', 'M', '1929-02-24',	(SELECT dbo.Zwroc_nr_pracownika(55071551574))),
 	(81010145617, 'Elwira', 'Litra', 'K', '1981-01-01',			(SELECT dbo.Zwroc_nr_pracownika(69113067926))),
-	(44090153734, 'Wanda', 'Pi≥sudska', 'K', '1944-09-01',		(SELECT dbo.Zwroc_nr_pracownika(82121411272))),
+	(44090153734, 'Wanda', 'Pi≈Çsudska', 'K', '1944-09-01',		(SELECT dbo.Zwroc_nr_pracownika(82121411272))),
 	(49061562671, 'Piotr', 'Stefczyk', 'M', '1949-06-15',		(SELECT dbo.Zwroc_nr_pracownika(82121411272))),
 	(53053056828, 'Agata', 'Karp', 'K', '1953-05-30',			(SELECT dbo.Zwroc_nr_pracownika(59042575916))),
 	(66011653642, 'Norbert', 'Kot', 'M', '1966-01-16',			(SELECT dbo.Zwroc_nr_pracownika(69113067926))),
@@ -178,57 +178,57 @@ INSERT INTO Posiadana_choroba (Data_rozpoznania, Stopien_zaawansowania, ID_choro
 
 INSERT INTO Pokoj_pacjenta (Numer_pokoju, Ilosc_lozek, Lazienka, Nazwa_oddzialu)
 	VALUES
-	('R1', 1, 0, 'Oddzia≥ Radioterapii'),
-	('R2', 2, 1, 'Oddzia≥ Radioterapii'),
-	('R3', 3, 0, 'Oddzia≥ Radioterapii'),
-	('R4', 1, 1, 'Oddzia≥ Radioterapii'),
-	('R5', 2, 0, 'Oddzia≥ Radioterapii'), --5 pokojow
-	('C1', 2, 1, 'Oddzia≥ Chemioterapii'),
-	('C2', 2, 0, 'Oddzia≥ Chemioterapii'),
-	('C3', 4, 1, 'Oddzia≥ Chemioterapii'),
-	('C4', 2, 1, 'Oddzia≥ Chemioterapii'),
-	('C5', 1, 0, 'Oddzia≥ Chemioterapii'), --5 pokojow
-	('O1', 4, 1, 'Oddzia≥ Chirurgii Onkologicznej'),
-	('O2', 2, 1, 'Oddzia≥ Chirurgii Onkologicznej'),
-	('O3', 2, 1, 'Oddzia≥ Chirurgii Onkologicznej'),
-	('O4', 2, 1, 'Oddzia≥ Chirurgii Onkologicznej'),
-	('O5', 1, 0, 'Oddzia≥ Chirurgii Onkologicznej'),
-	('O6', 1, 0, 'Oddzia≥ Chirurgii Onkologicznej'),
-	('O7', 3, 1, 'Oddzia≥ Chirurgii Onkologicznej'),
-	('O8', 2, 0, 'Oddzia≥ Chirurgii Onkologicznej'), --8 pokojow
-	('G1', 1, 0, 'Oddzia≥ Ginekologii Onkologicznej'),
-	('G2', 2, 1, 'Oddzia≥ Ginekologii Onkologicznej'),
-	('G3', 2, 1, 'Oddzia≥ Ginekologii Onkologicznej'),
-	('G4', 3, 1, 'Oddzia≥ Ginekologii Onkologicznej'),
-	('G5', 2, 0, 'Oddzia≥ Ginekologii Onkologicznej'), --5 pokojow
-	('K1', 2, 1, 'Oddzia≥ Onkologii Klinicznej'),
-	('K2', 2, 1, 'Oddzia≥ Onkologii Klinicznej'),
-	('K3', 1, 1, 'Oddzia≥ Onkologii Klinicznej'); --3 pokoje,		lacznie szpital posiada 26 pokojow z 52 lozkami w sumie
+	('R1', 1, 0, 'Oddzia≈Ç Radioterapii'),
+	('R2', 2, 1, 'Oddzia≈Ç Radioterapii'),
+	('R3', 3, 0, 'Oddzia≈Ç Radioterapii'),
+	('R4', 1, 1, 'Oddzia≈Ç Radioterapii'),
+	('R5', 2, 0, 'Oddzia≈Ç Radioterapii'), --5 pokojow
+	('C1', 2, 1, 'Oddzia≈Ç Chemioterapii'),
+	('C2', 2, 0, 'Oddzia≈Ç Chemioterapii'),
+	('C3', 4, 1, 'Oddzia≈Ç Chemioterapii'),
+	('C4', 2, 1, 'Oddzia≈Ç Chemioterapii'),
+	('C5', 1, 0, 'Oddzia≈Ç Chemioterapii'), --5 pokojow
+	('O1', 4, 1, 'Oddzia≈Ç Chirurgii Onkologicznej'),
+	('O2', 2, 1, 'Oddzia≈Ç Chirurgii Onkologicznej'),
+	('O3', 2, 1, 'Oddzia≈Ç Chirurgii Onkologicznej'),
+	('O4', 2, 1, 'Oddzia≈Ç Chirurgii Onkologicznej'),
+	('O5', 1, 0, 'Oddzia≈Ç Chirurgii Onkologicznej'),
+	('O6', 1, 0, 'Oddzia≈Ç Chirurgii Onkologicznej'),
+	('O7', 3, 1, 'Oddzia≈Ç Chirurgii Onkologicznej'),
+	('O8', 2, 0, 'Oddzia≈Ç Chirurgii Onkologicznej'), --8 pokojow
+	('G1', 1, 0, 'Oddzia≈Ç Ginekologii Onkologicznej'),
+	('G2', 2, 1, 'Oddzia≈Ç Ginekologii Onkologicznej'),
+	('G3', 2, 1, 'Oddzia≈Ç Ginekologii Onkologicznej'),
+	('G4', 3, 1, 'Oddzia≈Ç Ginekologii Onkologicznej'),
+	('G5', 2, 0, 'Oddzia≈Ç Ginekologii Onkologicznej'), --5 pokojow
+	('K1', 2, 1, 'Oddzia≈Ç Onkologii Klinicznej'),
+	('K2', 2, 1, 'Oddzia≈Ç Onkologii Klinicznej'),
+	('K3', 1, 1, 'Oddzia≈Ç Onkologii Klinicznej'); --3 pokoje,		lacznie szpital posiada 26 pokojow z 52 lozkami w sumie
 
 
 
 INSERT INTO Pobyty (Data_przyjecia, Data_wypisania, Numer_pacjenta, Nazwa_oddzialu, Numer_pokoju)
 	VALUES
-	('2018-06-05', '2018-06-28', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 90121003556), 'Oddzia≥ Radioterapii', 'R1'), 
-	('2019-12-05', '2019-12-12', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 85041806186), 'Oddzia≥ Radioterapii', 'R2'),
-	('2020-12-12', null,		 (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66010102741), 'Oddzia≥ Radioterapii', 'R2'),
-	('2008-01-28', '2008-02-05', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 99122303186), 'Oddzia≥ Chemioterapii', 'C1'),
-	('2015-02-01', '2015-02-18', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 77101516854), 'Oddzia≥ Chemioterapii', 'C1'),
-	('2016-03-03', '2016-03-04', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 43060911573), 'Oddzia≥ Chemioterapii', 'C2'),
-	('2018-04-18', '2018-04-21', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 32102964167), 'Oddzia≥ Chemioterapii', 'C3'),
-	('2020-07-15', '2020-07-23', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 59022467963), 'Oddzia≥ Chirurgii Onkologicznej', 'O1'),
-	('2020-06-15', '2020-06-30', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 88061513797), 'Oddzia≥ Chirurgii Onkologicznej', 'O1'),
-	('2017-11-26', '2017-12-01', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 70090174539), 'Oddzia≥ Chirurgii Onkologicznej', 'O1'),
-	('2020-05-21', '2020-05-24', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 69120305256), 'Oddzia≥ Chirurgii Onkologicznej', 'O5'),
-	('2019-12-30', '2020-01-07', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66021058619), 'Oddzia≥ Chirurgii Onkologicznej', 'O6'),
-	('2020-08-01', '2020-08-03', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 72050612765), 'Oddzia≥ Ginekologii Onkologicznej', 'G1'),
-	('2020-07-31', '2020-08-04', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 29022467892), 'Oddzia≥ Ginekologii Onkologicznej', 'G2'),
-	('2007-05-28', '2007-06-03', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 81010145617), 'Oddzia≥ Ginekologii Onkologicznej', 'G2'),
-	('2016-05-07', '2016-05-12', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 44090153734), 'Oddzia≥ Ginekologii Onkologicznej', 'G3'),
-	('2020-09-04', '2020-09-10', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 49061562671), 'Oddzia≥ Onkologii Klinicznej', 'K1'),
-	('2020-11-03', '2020-11-09', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 53053056828), 'Oddzia≥ Onkologii Klinicznej', 'K2'),
-	('2019-10-10', '2019-10-17', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66011653642), 'Oddzia≥ Onkologii Klinicznej', 'K3'),
-	('2020-12-17', '2021-01-07', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 71041656632), 'Oddzia≥ Onkologii Klinicznej', 'K2');
+	('2018-06-05', '2018-06-28', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 90121003556), 'Oddzia≈Ç Radioterapii', 'R1'), 
+	('2019-12-05', '2019-12-12', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 85041806186), 'Oddzia≈Ç Radioterapii', 'R2'),
+	('2020-12-12', null,		 (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66010102741), 'Oddzia≈Ç Radioterapii', 'R2'),
+	('2008-01-28', '2008-02-05', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 99122303186), 'Oddzia≈Ç Chemioterapii', 'C1'),
+	('2015-02-01', '2015-02-18', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 77101516854), 'Oddzia≈Ç Chemioterapii', 'C1'),
+	('2016-03-03', '2016-03-04', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 43060911573), 'Oddzia≈Ç Chemioterapii', 'C2'),
+	('2018-04-18', '2018-04-21', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 32102964167), 'Oddzia≈Ç Chemioterapii', 'C3'),
+	('2020-07-15', '2020-07-23', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 59022467963), 'Oddzia≈Ç Chirurgii Onkologicznej', 'O1'),
+	('2020-06-15', '2020-06-30', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 88061513797), 'Oddzia≈Ç Chirurgii Onkologicznej', 'O1'),
+	('2017-11-26', '2017-12-01', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 70090174539), 'Oddzia≈Ç Chirurgii Onkologicznej', 'O1'),
+	('2020-05-21', '2020-05-24', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 69120305256), 'Oddzia≈Ç Chirurgii Onkologicznej', 'O5'),
+	('2019-12-30', '2020-01-07', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66021058619), 'Oddzia≈Ç Chirurgii Onkologicznej', 'O6'),
+	('2020-08-01', '2020-08-03', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 72050612765), 'Oddzia≈Ç Ginekologii Onkologicznej', 'G1'),
+	('2020-07-31', '2020-08-04', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 29022467892), 'Oddzia≈Ç Ginekologii Onkologicznej', 'G2'),
+	('2007-05-28', '2007-06-03', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 81010145617), 'Oddzia≈Ç Ginekologii Onkologicznej', 'G2'),
+	('2016-05-07', '2016-05-12', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 44090153734), 'Oddzia≈Ç Ginekologii Onkologicznej', 'G3'),
+	('2020-09-04', '2020-09-10', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 49061562671), 'Oddzia≈Ç Onkologii Klinicznej', 'K1'),
+	('2020-11-03', '2020-11-09', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 53053056828), 'Oddzia≈Ç Onkologii Klinicznej', 'K2'),
+	('2019-10-10', '2019-10-17', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66011653642), 'Oddzia≈Ç Onkologii Klinicznej', 'K3'),
+	('2020-12-17', '2021-01-07', (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 71041656632), 'Oddzia≈Ç Onkologii Klinicznej', 'K2');
 
 
 
@@ -237,56 +237,56 @@ INSERT INTO Zabiegi_i_operacje (Nazwa, Zalecenia, ID_pobytu, Numer_pacjenta)
 	VALUES
 	('Kolonoskopia', 'Test', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 90121003556)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 90121003556)),
-	('Gastroskopia', 'Nie paliÊ przez tydzieÒ.',
+	('Gastroskopia', 'Nie paliƒá przez tydzie≈Ñ.',
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 90121003556)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 90121003556)),
-	('Biopsja prostaty', 'KontrolowaÊ stan zdrowia, w razie potrzeby kontaktowaÊ siÍ z lekarzem rodzinnym.', 
+	('Biopsja prostaty', 'Kontrolowaƒá stan zdrowia, w razie potrzeby kontaktowaƒá siƒô z lekarzem rodzinnym.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 85041806186)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 85041806186)),
-	('Kolonoskopia', 'StosowaÊ siÍ do zaleconej diety.', 
+	('Kolonoskopia', 'Stosowaƒá siƒô do zaleconej diety.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 66010102741)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 66010102741)),
-	('UsuniÍcie guza CUN', 'PrzyjmowaÊ zalecone leki.', 
+	('Usuniƒôcie guza CUN', 'Przyjmowaƒá zalecone leki.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 99122303186)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 99122303186)),
-	('Termoablacja', 'Nie paliÊ przez tydzieÒ i przyjmowaÊ zalecone leki.', 
+	('Termoablacja', 'Nie paliƒá przez tydzie≈Ñ i przyjmowaƒá zalecone leki.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 77101516854)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 77101516854)),
-	('Appendektomia', 'PrzyjmowaÊ zalecone leki.', 
+	('Appendektomia', 'Przyjmowaƒá zalecone leki.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 43060911573)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 43060911573)),
-	('Cholecystektomia', 'SkontaktowaÊ siÍ z lekarzem rodzinnym po wypisaniu ze szpitala, nie stosowaÊ uøywek.', 
+	('Cholecystektomia', 'Skontaktowaƒá siƒô z lekarzem rodzinnym po wypisaniu ze szpitala, nie stosowaƒá u≈ºywek.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 32102964167)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 32102964167)),
-	('Histerektomia z przydatkami', 'PrzyjmowaÊ zalecone leki. W razie niepokoju kontaktowaÊ siÍ z lekarzem rodzinnym.', 
+	('Histerektomia z przydatkami', 'Przyjmowaƒá zalecone leki. W razie niepokoju kontaktowaƒá siƒô z lekarzem rodzinnym.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 59022467963)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 59022467963)),
-	('Gastroskopia', 'PrzyjmowaÊ zalecone leki.', 
+	('Gastroskopia', 'Przyjmowaƒá zalecone leki.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 88061513797)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 88061513797)),
-	('Craniotomia', 'PrzyjmowaÊ zalecone leki.', 
+	('Craniotomia', 'Przyjmowaƒá zalecone leki.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 70090174539)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 70090174539)),
-	('Termoablacja', 'PrzyjmowaÊ zalecone leki.', 
+	('Termoablacja', 'Przyjmowaƒá zalecone leki.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 69120305256)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 69120305256)),
-	('Termoablacja', 'PrzyjmowaÊ zalecone leki.', 
+	('Termoablacja', 'Przyjmowaƒá zalecone leki.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 66021058619)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 66021058619)),
-	('Termoablacja', 'Kontakt z lekarzem rodzinnym i nastÍpna wizyta do ustalenia w rejestracji.', 
+	('Termoablacja', 'Kontakt z lekarzem rodzinnym i nastƒôpna wizyta do ustalenia w rejestracji.', 
 				(SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta from Pacjenci where PESEL = 71041656632)), (SELECT Numer_pacjenta from Pacjenci where PESEL = 71041656632));
 
 INSERT INTO Badania (Rezonans, Biopsja, CA_125, CEA, Numer_pacjenta)
 	VALUES
-		('Nie wykryto zmian szczegÛlnych.', null, 17.0, 3.0, 
+		('Nie wykryto zmian szczeg√≥lnych.', null, 17.0, 3.0, 
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 66021058619)),
-		('Punkt charakterystyczny do biopsji.', 'Wykryto komÛrki guzowe w prawej nerce.', null, null, 
+		('Punkt charakterystyczny do biopsji.', 'Wykryto kom√≥rki guzowe w prawej nerce.', null, null, 
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 69120305256)),
-		(null, 'Nie wykryto guzkÛw tarczycy.', null, null, 
+		(null, 'Nie wykryto guzk√≥w tarczycy.', null, null, 
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 99122303186)),
 		(null, null, null, 4.5, 
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 72050612765)),
 		(null, null, 24.0, 2.7, 
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 29022467892)),
-		(null, 'Nie wykryto zmian nowotworowych w wπtrobie, zalecane przeprowadzenie biopsji trzustki.', null, null, 
+		(null, 'Nie wykryto zmian nowotworowych w w≈°trobie, zalecane przeprowadzenie biopsji trzustki.', null, null, 
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 81010145617)),
-		('Poszerzony uk≥ad komorowy w rezonansie magnetycznym g≥owy.', null, null, 5.4,
+		('Poszerzony uk≈Çad komorowy w rezonansie magnetycznym g≈Çowy.', null, null, 5.4,
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 44090153734)),
-		('Torbiel w rezonansie magnetycznym g≥owy.', null, 14.0, 1.6,
+		('Torbiel w rezonansie magnetycznym g≈Çowy.', null, 14.0, 1.6,
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 49061562671)),
-		('KrÍgos≥up w stanie fatalnym...', null, null, 43.0,
+		('Krƒôgos≈Çup w stanie fatalnym...', null, null, 43.0,
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 53053056828)),
-		(null, 'Wykonana biopsja wskazanego obszaru p≥uc, úladowe iloúci komÛrek guzowych.', 59.0, 7.5,
+		(null, 'Wykonana biopsja wskazanego obszaru p≈Çuc, ¬úladowe ilo¬úci kom√≥rek guzowych.', 59.0, 7.5,
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 66011653642)),
-		('Brak zmian', 'Wykryto zmianÍ nowotworowπ o rozmiarze 3x2x1', 57.0, 6,
+		('Brak zmian', 'Wykryto zmianƒô nowotworow≈° o rozmiarze 3x2x1', 57.0, 6,
 				(SELECT Numer_pacjenta from Pacjenci where PESEL = 71041656632));
 
 INSERT INTO Przebieg_leczenia (Rodzaj_leczenia, Zatrzymanie_sie_choroby, Remisja, Informacje_od_lekarza, Data_zgonu, Numer_pracownika, ID_pobytu, ID_diagnozy)
@@ -308,8 +308,8 @@ INSERT INTO Przebieg_leczenia (Rodzaj_leczenia, Zatrzymanie_sie_choroby, Remisja
 	('Medycyna nuklearna', 1, 1, null, null,	(SELECT Numer_pracownika FROM Pacjenci WHERE PESEL = 81010145617), (SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 81010145617)), (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 81010145617))),
 	('HIPEC', 1, 0, null, null,					(SELECT Numer_pracownika FROM Pacjenci WHERE PESEL = 44090153734), (SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 44090153734)), (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 44090153734))),
 	('Chemioterapia', 1, 0, null, null,			(SELECT Numer_pracownika FROM Pacjenci WHERE PESEL = 49061562671), (SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 49061562671)), (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 49061562671))),
-	('Leczenie chirurgiczne', 0, 1, 'Pacjent zmar≥ w wyniku powik≥aÒ po operacji chirurgicznej.', '2020-11-09', (SELECT Numer_pracownika FROM Pacjenci WHERE PESEL = 53053056828), (SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 53053056828)), (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 53053056828))),
-	('Leczenie chirurgiczne', 1, 0, 'Stosowane leczenie nie przynios≥o efektÛw.', '2019-10-17',					(SELECT Numer_pracownika FROM Pacjenci WHERE PESEL = 66011653642), (SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66011653642)), (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66011653642))),
+	('Leczenie chirurgiczne', 0, 1, 'Pacjent zmar≈Ç w wyniku powik≈Ça≈Ñ po operacji chirurgicznej.', '2020-11-09', (SELECT Numer_pracownika FROM Pacjenci WHERE PESEL = 53053056828), (SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 53053056828)), (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 53053056828))),
+	('Leczenie chirurgiczne', 1, 0, 'Stosowane leczenie nie przynios≈Ço efekt√≥w.', '2019-10-17',					(SELECT Numer_pracownika FROM Pacjenci WHERE PESEL = 66011653642), (SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66011653642)), (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66011653642))),
 	('Leczenie chirurgiczne', 1, 0, 'Zabieg wykonany z powodzeniem.', null,										(SELECT Numer_pracownika FROM Pacjenci WHERE PESEL = 71041656632), (SELECT ID_pobytu FROM Pobyty WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 71041656632)), (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 71041656632)));
 
 
@@ -317,7 +317,7 @@ INSERT INTO Przyjmowane_leki (Data_rozpoczenia_przyjmowania, Data_zakonczenia_pr
 	VALUES
 	('2018-06-15', '2018-08-15', default,					(SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 90121003556), 'Lek1', (SELECT ID_leczenia FROM Przebieg_leczenia WHERE ID_diagnozy IN (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 90121003556)))),
 	('2019-12-10', '2019-12-25', null,						(SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 85041806186), 'Lek2', (SELECT ID_leczenia FROM Przebieg_leczenia WHERE ID_diagnozy IN (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 85041806186)))),
-	('2020-12-12', null, 'StosowaÊ do odwolania.',			(SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66010102741), 'Lek3', (SELECT ID_leczenia FROM Przebieg_leczenia WHERE ID_diagnozy IN (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66010102741)))),
+	('2020-12-12', null, 'Stosowaƒá do odwolania.',			(SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66010102741), 'Lek3', (SELECT ID_leczenia FROM Przebieg_leczenia WHERE ID_diagnozy IN (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 66010102741)))),
 	('2008-02-18', '2008-03-13', default,				    (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 99122303186), 'Lek1', (SELECT ID_leczenia FROM Przebieg_leczenia WHERE ID_diagnozy IN (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 99122303186)))),
 	('2015-02-03', null, null,								(SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 77101516854), 'Lek3', (SELECT ID_leczenia FROM Przebieg_leczenia WHERE ID_diagnozy IN (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 77101516854)))),
 	('2016-03-03', '2016-03-05', 'Przeciwko zakrzepicy.',	(SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 43060911573), 'Lek4', (SELECT ID_leczenia FROM Przebieg_leczenia WHERE ID_diagnozy IN (SELECT ID_diagnozy FROM Posiadana_choroba WHERE Numer_pacjenta IN (SELECT Numer_pacjenta FROM Pacjenci WHERE PESEL = 43060911573)))),
