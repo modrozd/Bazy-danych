@@ -68,12 +68,12 @@ WHERE   Numer_pracownika   =  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL 
 
 INSERT INTO Oddzialy (Nazwa_oddzialu, Ordynator)
 	VALUES
-	('Oddział Radioterapii',			  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 59042575916)), --Andrzej Zawada, 5p
-	('Oddział Chemioterapii',			  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 69113067926)), --Marzena Pomorska, 5p
-	('Oddział Chirurgii Onkologicznej',   (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 88041256296)), --Cezary Pazura, 8p
-	('Oddział Ginekologii Onkologicznej', (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 63042753921)), --Urszula Dudziak, 5p
-	('Oddział Onkologii Klinicznej',	  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 90031463197)), --Marek Grechuta, 3p
-	('Oddział Diagnostyki Obrazowej',	  (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 63081956157)); --Marta Koman, 0p
+	('Oddział Radioterapii',		(SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 59042575916)), --Andrzej Zawada, 5p
+	('Oddział Chemioterapii',	        (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 69113067926)), --Marzena Pomorska, 5p
+	('Oddział Chirurgii Onkologicznej',     (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 88041256296)), --Cezary Pazura, 8p
+	('Oddział Ginekologii Onkologicznej', 	(SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 63042753921)), --Urszula Dudziak, 5p
+	('Oddział Onkologii Klinicznej',        (SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 90031463197)), --Marek Grechuta, 3p
+	('Oddział Diagnostyki Obrazowej',	(SELECT Numer_pracownika FROM Lekarze WHERE PESEL = 63081956157)); --Marta Koman, 0p
 
 UPDATE Lekarze 
 SET		Nazwa_oddzialu = 'Oddział Radioterapii'
